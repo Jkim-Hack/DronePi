@@ -10,7 +10,7 @@ int main(void) {
   pullUpDnControl(0, PUD_UP);
 
   while(1) {
-    pwmWrite(0, HIGH);
+    digitalWrite(0, HIGH);
   }
 
   return 0;
