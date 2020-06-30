@@ -7,10 +7,9 @@
 int main(void) {
   wiringPiSetup();
   pinMode(0, OUTPUT);
-  pullUpDnControl(0, PUD_UP);
 
   while(1) {
-    digitalWrite(0, HIGH);
+    digitalWrite(0, LOW);
   }
 
   return 0;
