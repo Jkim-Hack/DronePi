@@ -6,11 +6,12 @@
 
 int main(void) {
   wiringPiSetup();
-  pinMode(0, OUTPUT);
+  wiringPiSetupPhys();
   pullUpDnControl(0, PUD_UP);
-
+  int pin = physPinToGpio(17);
+  pinMode(0, OUTPUT);
   while(1) {
-    digitalWrite(0, HIGH);
+    digitalWrite(pin, LOW);
   }
 
   return 0;
